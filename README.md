@@ -322,3 +322,42 @@ npm run benchmark
 - **Reflection (1 Mark)**: Understanding edge cases, error listener safety, and production scalability trade-offs (EventEmitter vs RabbitMQ/BullMQ).
 - **Lab file evidence (1 Mark)**: Completeness of repository, terminal logs, and interactive UI dashboard.
 
+---
+
+## 📸 Screenshots Gallery (`ss/`)
+
+### 1. Tasks Dashboard with Active EventEmitter Subsystem
+![Tasks Dashboard](ss/01_tasks_dashboard.png)
+*Live dashboard displaying task cards, status badges, and active event telemetry HUD showing background non-blocking execution.*
+
+---
+
+### 2. Live Event Stream Modal
+![Live Event Stream](ss/02_event_stream_modal.png)
+*Interactive modal displaying live event logs for `task-created` and `task-deleted`, showing empirical timestamps of API response vs listener completion (+2004ms).*
+
+---
+
+### 3. Event Architecture & Timing Flow
+![Event Architecture](ss/03_event_architecture_diagram.png)
+*Detailed technical overview explaining V8 call stack clearing, TCP stream flushing, and asynchronous handoff to the Libuv Timers phase.*
+
+---
+
+### 4. Listener Lab & Fault Injection
+![Listener Lab](ss/04_listener_fault_injection.png)
+*Interactive controls testing artificial delay adjustment (2000ms) and verifying Supplementary Problem 2 error listener crash resilience.*
+
+---
+
+### 5. Automated CLI Benchmark Proof
+![CLI Benchmark](ss/05_cli_benchmark_proof.png)
+*Terminal output running `npm run benchmark`, proving that the client receives their HTTP 201 response in ~22ms while the background worker processes for 2000ms asynchronously.*
+
+---
+
+### 6. Performance & Decoupling Telemetry
+![Performance Page](ss/06_performance_page.png)
+*Analytical view comparing synchronous latency (2,025ms) against decoupled event-driven latency (22ms), demonstrating a 98.9% latency reduction.*
+
+
